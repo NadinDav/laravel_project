@@ -12,6 +12,10 @@ use App\Models\Book;
 class User extends Authenticatable
 {
 
+    protected $fillable = [
+        'firstname', 'lastname', 'login', 'email', 'password', 'remember_token'
+    ];
+
     public function books(){
         return $this->hasMany(Book::class, 'user_id', 'id');
     }

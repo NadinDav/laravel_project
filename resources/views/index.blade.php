@@ -8,7 +8,7 @@
 <br>
 <h1>Авторы</h1>
 
-<b><a href='/admin/login'>В админку</a></b>
+<b><a href='/login'>В админку</a></b>
 
 @foreach($users as $key => $user)
     <ul><b><a href='index.php?id={{$user->id}}'>{{$user->firstname}} {{$user->lastname}} </a>

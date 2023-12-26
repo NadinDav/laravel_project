@@ -21,4 +21,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function (){
 
 });
 
+Route::group(['middleware' => 'auth', 'namespace' => 'App\Http\Controllers'], function (){
+    Route::get('/admin', 'AdminController@index');
 
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
