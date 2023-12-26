@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers'], function (){
+
     Route::get('/', 'StartController@index');
+    Route::get('books', 'StartController@books');
+    Route::get('categories', 'StartController@categories');
+
 });
 
 
