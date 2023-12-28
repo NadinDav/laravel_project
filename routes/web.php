@@ -21,8 +21,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function (){
 
 });
 
-Route::group(['middleware' => 'auth', 'namespace' => 'App\Http\Controllers'], function (){
-    Route::get('/admin', 'AdminController@index');
+Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'App\Http\Controllers'], function (){
+
+    Route::get('/', 'AdminController@index');
+    Route::resources(['users' => 'UserController']);
 
 });
 
