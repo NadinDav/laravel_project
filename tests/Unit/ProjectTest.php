@@ -2,15 +2,27 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class ProjectTest extends TestCase
 {
     /**
      * A basic unit test example.
      */
-    public function test_example(): void
+    public function testExample(): void
     {
-        $this->assertTrue(true);
+        $response = $this->get('/');
+        $response->assertOk();
+        //$this->assertTrue(true);
     }
+    public function testAuthorize(){
+         $this->post('/login', [
+            'email' => 'nadin@bk.ru',
+            'password' => '17011990'
+        ]);
+
+         $response = $this->get('admin/test');
+        $response->assertOk();
+    }
+
 }

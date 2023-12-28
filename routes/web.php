@@ -22,6 +22,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function (){
 });
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'App\Http\Controllers'], function (){
+    Route::get('test', function (){
+        return response()->json(['ok'], 200);
+    });
 
     Route::get('/', 'AdminController@index');
     Route::resources(['users' => 'UserController']);

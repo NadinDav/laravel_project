@@ -17,7 +17,7 @@ class Authorize
     public function handle(Request $request, Closure $next): Response
     {
         if(!Auth::user()){
-            return response()->redirectTo('/');
+            return response()->json(['error' => 'Not Authorize'], 401);
         }
         return $next($request);
     }
