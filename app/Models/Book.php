@@ -8,6 +8,7 @@ use App\Models\User;
 
 class Book extends Model
 {
+    protected $fillable = ['name'];
   //  use HasFactory;
     public function user(){
         return $this->hasOne(User::class, 'id', 'user_id');

@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'namespace' => 'App\H
 
     Route::get('/', 'AdminController@index');
     Route::resources(['users' => 'UserController']);
+    Route::resources(['books'=> 'BookController']);
 
 });
 
