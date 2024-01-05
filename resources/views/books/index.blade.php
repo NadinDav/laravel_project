@@ -36,9 +36,9 @@
     @csrf
     @method('POST')
     <label for="name">Название</label>
-    <input type="text" name="name" id="Название" class="form-control" placeholder="Введите название"><br>
-    <label for="user_id">Автор</label>
-    <select name="user_id">
+    <input type="text" name="name" id="name" class="form-control" placeholder="Введите название"><br>
+    <label for="id">Автор</label>
+    <select name="id">
 
        @foreach ($users as $key => $user)
             <option value='{{$user->id}}'>{{$user->firstname}} {{$user->lastname}}</option>

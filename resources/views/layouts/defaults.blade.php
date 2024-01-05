@@ -13,12 +13,11 @@
 
 @yield('content')
 
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start">
 
     <!-- Section: Links  -->
     <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
+          <!-- Grid row -->
 
                 <!-- Grid column -->
 
@@ -34,7 +33,7 @@
                     <p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
                 </div>
                 <!-- Grid column -->
-            </div>
+
             <!-- Grid row -->
 
     </section>

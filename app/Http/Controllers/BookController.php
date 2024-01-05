@@ -29,9 +29,10 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-
-        Book::create(['name'=> $request->input('name')]);
+        $user = User::get();
+        $book = Book::create(['name'=> $request->input('name'), 'user_id'=> $request->input('id')]);
         return response()->redirectTo('/admin/books');
+
 
     }
 

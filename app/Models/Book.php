@@ -8,7 +8,9 @@ use App\Models\User;
 
 class Book extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name',
+        'user_id' ];
+
   //  use HasFactory;
     public function user(){
         return $this->hasOne(User::class, 'id', 'user_id');

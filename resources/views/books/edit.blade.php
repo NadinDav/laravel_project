@@ -1,13 +1,14 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>пример</title>
+    <title>{{$book->name}}</title>
 </head>
 <body>
 <h1>
     @include('layouts.app')
         {{$book->name}}
-</h1>
+    </h1>
+<a href="/admin/books">Назад</a><br><br>
 <form action="{{route('books.update', $book)}}" method="post">
     @method('PUT')
     @csrf

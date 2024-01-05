@@ -65,6 +65,7 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         User::destroy($id);
+        //dd($id);
         return response()->redirectTo('admin/users');
     }
 }
