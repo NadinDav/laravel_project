@@ -22,6 +22,17 @@
         color: #4f5050;
         text-shadow: 7px 7px 7px brown;
     }
+        .btn-outline-secondary{
+            margin-left: 567px;
+            margin-top: -76px;
+        }
+    button {
+
+        align-self: center;
+        padding-top: var(--su8);
+        padding-bottom: var(--su8);
+    }
+
     </style>
 </head>
     <body class="main">
@@ -29,15 +40,12 @@
        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
             <dotlottie-player src="https://lottie.host/ce8963c9-77d3-4ea1-8a10-cc6bd3bd823a/woPYmj1cnY.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
         <h1 style="font-size: 7em">BookStore</h1>
+        <button type="button" class="btn btn-outline-secondary" style="border-radius: 0.5rem"><b> <a href='/login' class="link-dark">Войти</a> </b></button>
     </div>
 <div class="max-w-7xl mx-auto p-4">
 
-
-
-<b><a href='/login' class="link-dark">В админку</a></b>
-
 @foreach($users as $key => $user)
-    <ul class="list-group"><b><a href='index.php?id={{$user->id}}' class="list-group-item list-group-item-action list-group-item-secondary">{{$user->firstname}} {{$user->lastname}} </a>
+    <ul class="list-group"><b><a class="list-group-item list-group-item-action list-group-item-secondary" style="border-radius: 0.5rem" href='index.php?id={{$user->id}}' class="link-dark" >{{$user->firstname}} {{$user->lastname}} </a>
          @foreach($user->books as $book)
              <li class="mt-4 text-black-50 text-sm leading-relaxed">{{$book->name}}</li>
          @endforeach

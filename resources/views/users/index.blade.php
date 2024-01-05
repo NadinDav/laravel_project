@@ -21,7 +21,8 @@
 
 @foreach ($users as $key => $user)
     <a href='{{route('users.edit', $user)}}' class="list-group-item list-group-item-action list-group-item-info"> {{$user->firstname}} {{$user->lastname}}</a>
-    <form action='{{route('users.destroy', $user->id)}}' method='POST'>
+
+    <form action='{{route('users.destroy', $user)}}' method='POST'>
         @method('DELETE')
         @csrf
     <input type="button" class="btn btn-primary btn-sm" value='Удалить'>
